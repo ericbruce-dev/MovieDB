@@ -3,6 +3,6 @@
     public class AppSettings
     {
         public MovieSettings MovieDbSettings { get; set; }
-        public TMDBSettings TBDBSettings { get; set; }
+        public TMDBSettings TMDBSettings { get; set; }
     }
 }

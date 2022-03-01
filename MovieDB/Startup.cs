@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using MovieDB.Data;
 using MovieDB.Models.Settings;
 using MovieDB.Services;
+using MovieDB.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,8 @@ namespace MovieDB
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddTransient<SeedService>();
+            services.AddHttpClient();
+            services.AddScoped<IRemoteMovieService, TMDBMovieService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
