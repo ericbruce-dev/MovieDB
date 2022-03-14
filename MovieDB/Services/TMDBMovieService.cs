@@ -88,10 +88,10 @@ namespace MovieDB.Services
 
         public async Task<MovieSearch> SearchMoviesAsync(MovieCategory category, int count)
         {
-            //1 Setup a default instance of MoiveSearch
+            //Setup a default instance of MoiveSearch
             MovieSearch movieSearch = new();
 
-            //2 Assemble the full request uri string
+            //Assemble the full request uri string
             var query = $"{_appSettings.TMDBSettings.BaseUrl}/movie/{category}";
             var queryParams = new Dictionary<string, string>()
             {
@@ -102,12 +102,12 @@ namespace MovieDB.Services
 
             var requestUri = QueryHelpers.AddQueryString(query, queryParams);
 
-            //3 Create a client and execute the request
+            //Create a client and execute the request
             var client = _httpClient.CreateClient();
             var request = new HttpRequestMessage(HttpMethod.Get, requestUri);
             var response = await client.SendAsync(request);
 
-            //4 Return the MovieSearch object
+            //Return the MovieSearch object
             if (response.IsSuccessStatusCode)
             {
                 var dcjs = new DataContractJsonSerializer(typeof(MovieSearch));
