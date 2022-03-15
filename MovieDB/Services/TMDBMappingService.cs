@@ -92,7 +92,7 @@ namespace MovieDB.Services
 
                 crewMembers.ForEach(member =>
                 {
-                    newMovie.Crews.Add(new MovieCrew()
+                    newMovie.Crew.Add(new MovieCrew()
                     {
                         CrewID = member.id,
                         Department = member.department,

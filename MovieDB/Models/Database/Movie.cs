@@ -41,6 +41,6 @@ namespace MovieDB.Models.Database
 
         public ICollection<MovieCollection> Collections { get; set; } = new HashSet<MovieCollection>();
         public ICollection<MovieCast> Cast  { get; set; } = new HashSet<MovieCast>();
-        public ICollection<MovieCrew> Crews { get; set; } = new HashSet<MovieCrew>();
+        public ICollection<MovieCrew> Crew { get; set; } = new HashSet<MovieCrew>();
     }
 }
