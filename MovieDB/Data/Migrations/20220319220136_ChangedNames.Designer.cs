@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieDB.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -9,9 +10,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MovieDB.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220319220136_ChangedNames")]
+    partial class ChangedNames
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -233,51 +235,51 @@ namespace MovieDB.Data.Migrations
 
             modelBuilder.Entity("MovieDB.Models.Database.Movie", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<byte[]>("Backdrop")
+                    b.Property<byte[]>("backdrop")
                         .HasColumnType("bytea");
 
-                    b.Property<string>("BackdropType")
+                    b.Property<string>("backdrop_type")
                         .HasColumnType("text");
 
-                    b.Property<int>("MovieId")
+                    b.Property<int>("movie_id")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Overview")
+                    b.Property<string>("overview")
                         .HasColumnType("text");
 
-                    b.Property<byte[]>("Poster")
+                    b.Property<byte[]>("poster")
                         .HasColumnType("bytea");
 
-                    b.Property<string>("PosterType")
+                    b.Property<string>("poster_type")
                         .HasColumnType("text");
 
-                    b.Property<int>("Rating")
+                    b.Property<int>("rating")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("ReleaseDate")
+                    b.Property<DateTime>("release_date")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("RunTime")
+                    b.Property<int>("run_time")
                         .HasColumnType("integer");
 
-                    b.Property<string>("TagLine")
+                    b.Property<string>("tag_line")
                         .HasColumnType("text");
 
-                    b.Property<string>("Title")
+                    b.Property<string>("title")
                         .HasColumnType("text");
 
-                    b.Property<string>("TrailerUrl")
+                    b.Property<string>("trailer_url")
                         .HasColumnType("text");
 
-                    b.Property<float>("VoteAverage")
+                    b.Property<float>("vote_average")
                         .HasColumnType("real");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Movie");
                 });

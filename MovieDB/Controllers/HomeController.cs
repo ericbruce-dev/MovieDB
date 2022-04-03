@@ -41,8 +41,6 @@ namespace MovieDB.Controllers
                 TopeRated = await _tmdbMovieService.SearchMoviesAsync(MovieCategory.top_rated, count),
                 Upcoming = await _tmdbMovieService.SearchMoviesAsync(MovieCategory.upcoming, count),
             };
-
-
             return View(data);
         }
 

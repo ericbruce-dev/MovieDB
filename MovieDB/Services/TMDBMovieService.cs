@@ -25,11 +25,11 @@ namespace MovieDB.Services
 
         public async Task<ActorDetail> ActorDetailAsync(int id)
         {
-            //1 Setup a default instance of MoiveSearch
+            //1 Setup a default instance of MovieSearch
             ActorDetail actorDetail = new();
 
             //2 Assemble the full request uri string
-            var query = $"{_appSettings.TMDBSettings.BaseUrl}/movie/{id}";
+            var query = $"{_appSettings.TMDBSettings.BaseUrl}/person/{id}";
             var queryParams = new Dictionary<string, string>()
             {
                 { "api_key", _appSettings.MovieDbSettings.TmdbApiKey },
@@ -113,8 +113,8 @@ namespace MovieDB.Services
                 var dcjs = new DataContractJsonSerializer(typeof(MovieSearch));
                 using var responseStream = await response.Content.ReadAsStreamAsync();
                 movieSearch = (MovieSearch)dcjs.ReadObject(responseStream);
-                movieSearch.Results = movieSearch.Results.Take(count).ToArray();
-                movieSearch.Results.ToList().ForEach(result => result.PosterPath = $"{_appSettings.TMDBSettings.BaseImagePath}/{_appSettings.MovieDbSettings.DefaultPosterSize}/{result.PosterPath}");
+                movieSearch.results = movieSearch.results.Take(count).ToArray();
+                movieSearch.results.ToList().ForEach(result => result.poster_path = $"{_appSettings.TMDBSettings.BaseImagePath}/{_appSettings.MovieDbSettings.DefaultPosterSize}/{result.poster_path}");
             }
 
             return movieSearch;

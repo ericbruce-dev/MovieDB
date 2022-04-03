@@ -30,28 +30,51 @@ namespace MovieDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(
-            //        Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDatabaseDeveloperPageExceptionFilter();
+            //  //services.AddDbContext<ApplicationDbContext>(options =>
+            //  //    options.UseSqlServer(
+            //  //        Configuration.GetConnectionString("DefaultConnection")));
+            //  //services.AddDatabaseDeveloperPageExceptionFilter();
+
+            //  services.AddDbContext<ApplicationDbContext>(options =>
+            //options.UseNpgsql(
+            //    ConnectionService.GetConnectionString(Configuration)));
+
+            //  services.AddDatabaseDeveloperPageExceptionFilter();
+
+            //  //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //  //    .AddEntityFrameworkStores<ApplicationDbContext>();
+            //  //services.AddControllersWithViews();
+
+            //  services.AddIdentity<IdentityUser, IdentityRole>()
+            //     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //  services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+
+            //  services.AddTransient<SeedService>();
+            //  services.AddHttpClient();
+            //  services.AddScoped<IRemoteMovieService, TMDBMovieService>();
+            //  services.AddScoped<IDataMappingService, TMDBMappingService>();
+            //  services.AddSingleton<IImageService, BasicImageService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-          options.UseNpgsql(
-              ConnectionService.GetConnectionString(Configuration)));
-            
+                options.UseNpgsql(
+                    ConnectionService.GetConnectionString(Configuration)));
+
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
-            //services.AddControllersWithViews();
 
             services.AddIdentity<IdentityUser, IdentityRole>()
-               .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddControllersWithViews();
+
+            services.AddHttpClient();
 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddTransient<SeedService>();
-            services.AddHttpClient();
             services.AddScoped<IRemoteMovieService, TMDBMovieService>();
             services.AddScoped<IDataMappingService, TMDBMappingService>();
             services.AddSingleton<IImageService, BasicImageService>();
@@ -84,7 +107,7 @@ namespace MovieDB
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
             });
         }
     }

@@ -20,7 +20,6 @@ namespace MovieDB.Controllers
         private readonly IImageService _imageService;
         private readonly IRemoteMovieService _tmdbMovieService;
         private readonly IDataMappingService _tmdbMappingService;
-        private string moviePosterFile;
 
         public MoviesController(IOptions<AppSettings> appSettings, ApplicationDbContext context, IImageService imageService, IRemoteMovieService tmdbMovieService, IDataMappingService tmdbMappingService)
         {
@@ -141,7 +140,7 @@ namespace MovieDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,MovieId,Title,TagLine,Overview,RunTime,ReleaseDate,Rating,VoteAverage,Poster,PosterType,Backdrop,BackdropType,TrailerUrl")] Movie movie, int collectionId)
+        public async Task<IActionResult> Create([Bind("Id,MovieId,Title,TagLine,Overview,RunTime,ReleaseDate,Rating,VoteAverage,Poster,poster_type,Backdrop,backdrop_type,TrailerUrl")] Movie movie, int collectionId)
         {
             if (ModelState.IsValid)
             {
@@ -182,7 +181,7 @@ namespace MovieDB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MovieId,Title,TagLine,Overview,RunTime,ReleaseDate,Rating,VoteAverage,Poster,PosterType,Backdrop,BackdropType,TrailerUrl")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MovieId,Title,TagLine,Overview,RunTime,ReleaseDate,Rating,VoteAverage,Poster,poster_type,Backdrop,backdrop_type,TrailerUrl")] Movie movie)
         {
             if (id != movie.Id)
             {
@@ -199,7 +198,7 @@ namespace MovieDB.Controllers
                         movie.Poster = await _imageService.EncodeImageAsync(movie.PosterFile);
                     }
 
-                    if (movie.BackdropFile is not null)
+                    if (movie.Backdrop is not null)
                     {
                         movie.BackdropType = movie.BackdropFile.ContentType;
                         movie.Backdrop = await _imageService.EncodeImageAsync(movie.BackdropFile);
