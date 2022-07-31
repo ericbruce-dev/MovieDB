@@ -58,12 +58,12 @@ namespace MovieDB.Services
                     Overview = movie.overview,
                     RunTime = movie.runtime,
                     VoteAverage = movie.vote_average,
-                    ReleaseDate = DateTime.Parse(movie.release_date),
+                    ReleaseDate = movie.release_date,
                     //TrailerUrl = BuildTrailerPath(movie.videos),
                     //Backdrop = await EncodeBackdropImageAsync(movie.backdrop_path),
                     //BackdropType = BuildImageType(movie.backdrop_path),
                     //Poster = await EncodePosterImageAsync(movie.poster_path),
-                    Rating = GetRating(movie.release_dates)
+                    //Rating = GetRating(movie.release_dates)
                 };
 
                 //var castMembers = movie.credits.cast.OrderByDescending(c => c.popularity)

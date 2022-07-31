@@ -6,7 +6,6 @@ D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\MovieDB.deps.json
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\MovieDB.runtimeconfig.json
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\MovieDB.runtimeconfig.dev.json
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\MovieDB.dll
-D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\ref\MovieDB.dll
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\MovieDB.pdb
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -439,3 +438,4 @@ D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspac
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\Code\MovieDB\MovieDB\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\Code\MovieDB\MovieDB\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
+D:\Code\MovieDB\MovieDB\obj\Debug\net5.0\refint\MovieDB.dll

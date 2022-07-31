@@ -17,9 +17,9 @@ namespace MovieDB.Models.Database
         public string Overview { get; set; }
         public int RunTime { get; set; }
 
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         [Display(Name = "Release Date")]
-        public DateTime ReleaseDate { get; set; }
+        public string ReleaseDate { get; set; }
         public MovieRating Rating { get; set; }
         public float VoteAverage { get; set; }
 

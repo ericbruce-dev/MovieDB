@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LS/ITxDJH0vS93cehhb7X3N5cPg3ydtlABZetJHnAo8TUWz7zeqBxqo/h6tfB76jK+jg3COkGGiRNRjuOr85Mw==",
+  "dgSpecHash": "tdW4nQvJ93mJzamzLZ2w2HVguXgoD2Usx38e5npO8YmBGJrd1PTs2y5qTH9sQwh9PEZSe9bYbFBmd29VI7QkKA==",
   "success": true,
   "projectFilePath": "D:\\Code\\MovieDB\\MovieDB\\MovieDB.csproj",
   "expectedPackageFiles": [
@@ -142,7 +142,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ebruc\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\ebruc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+    "C:\\Users\\ebruc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\ebruc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ebruc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ebruc\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
