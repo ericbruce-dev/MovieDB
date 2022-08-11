@@ -57,7 +57,7 @@ namespace MovieDB.Services
         public async Task<MovieDetail> MovieDetailAsync(int id)
         {
             //1 Setup a default instance of MoiveSearch
-            MovieDetail movieDetail = new();
+            MovieDetail movieDetail = new MovieDetail();
 
             //2 Assemble the full request uri string
             var query = $"{_appSettings.TMDBSettings.BaseUrl}/movie/{id}";
@@ -65,7 +65,7 @@ namespace MovieDB.Services
             {
                 { "api_key", _appSettings.MovieDbSettings.TmdbApiKey },
                 { "language", _appSettings.TMDBSettings.QueryOptions.Language },
-                { "append_to_response", _appSettings.TMDBSettings.QueryOptions.Page }
+                { "append_to_response", _appSettings.TMDBSettings.QueryOptions.AppendToResponse }
             };
 
             var requestUri = QueryHelpers.AddQueryString(query, queryParams);

@@ -19,7 +19,10 @@ namespace MovieDB.Services
 
         public string DecodeImage(byte[] poster, string contentType)
         {
-            if (poster == null) return null;
+            if (poster == null)
+            {
+                return null;
+            }
 
             var posterImage = Convert.ToBase64String(poster);
             return $"data:{contentType};base64,{posterImage}";
@@ -27,7 +30,10 @@ namespace MovieDB.Services
 
         public async Task<byte[]> EncodeImageAsync(IFormFile poster)
         {
-            if (poster == null) return null;
+            if (poster == null)
+            {
+                return null;
+            }
 
             using var ms = new MemoryStream();
             await poster.CopyToAsync(ms);
@@ -41,7 +47,7 @@ namespace MovieDB.Services
             using Stream stream = await response.Content.ReadAsStreamAsync();
 
             var ms = new MemoryStream();
-            await ms.CopyToAsync(ms);
+            await stream.CopyToAsync(ms);
             return ms.ToArray();
         }
     }

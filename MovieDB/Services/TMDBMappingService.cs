@@ -59,11 +59,11 @@ namespace MovieDB.Services
                     RunTime = movie.runtime,
                     VoteAverage = movie.vote_average,
                     ReleaseDate = movie.release_date,
-                    //TrailerUrl = BuildTrailerPath(movie.videos),
-                    //Backdrop = await EncodeBackdropImageAsync(movie.backdrop_path),
-                    //BackdropType = BuildImageType(movie.backdrop_path),
-                    //Poster = await EncodePosterImageAsync(movie.poster_path),
-                    //Rating = GetRating(movie.release_dates)
+                    TrailerUrl = BuildTrailerPath(movie.videos),
+                    Backdrop = await EncodeBackdropImageAsync(movie.backdrop_path),
+                    BackdropType = BuildImageType(movie.backdrop_path),
+                    Poster = await EncodePosterImageAsync(movie.poster_path),
+                    Rating = GetRating(movie.release_dates)
                 };
 
                 //var castMembers = movie.credits.cast.OrderByDescending(c => c.popularity)
@@ -158,13 +158,13 @@ namespace MovieDB.Services
         {
             if (videos != null)
             {
-                var videoKey = videos.results.FirstOrDefault(r => r.type.ToLower().Trim() == "trailer" && r.key != "")?.key;
+                var videoKey = videos.results.FirstOrDefault(r => r.type == "Trailer" && r.key != "")?.key;
                 return string.IsNullOrEmpty(videoKey) ? videoKey : $"{_appSettings.TMDBSettings.BaseYouTubePath}{videoKey}";
             }
 
             else
             {
-                return string.Empty;
+                return $"{_appSettings.TMDBSettings.BaseYouTubePath}PTe-8dX3NtY";
             }
         }
     }

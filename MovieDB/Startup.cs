@@ -53,7 +53,7 @@ namespace MovieDB
             //  services.AddTransient<SeedService>();
             //  services.AddHttpClient();
             //  services.AddScoped<IRemoteMovieService, TMDBMovieService>();
-            //  services.AddScoped<IDataMappingService, TMDBMappingService>();
+            //services.AddScoped<IDataMappingService, TMDBMappingService>();
             //  services.AddSingleton<IImageService, BasicImageService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
