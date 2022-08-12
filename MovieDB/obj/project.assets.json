@@ -7635,19 +7635,21 @@
   },
   "packageFolders": {
     "C:\\Users\\ebruc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\MovieDB.csproj",
+      "projectUniqueName": "D:\\Code\\MovieDB\\MovieDB\\MovieDB.csproj",
       "projectName": "MovieDB",
-      "projectPath": "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\MovieDB.csproj",
+      "projectPath": "D:\\Code\\MovieDB\\MovieDB\\MovieDB.csproj",
       "packagesPath": "C:\\Users\\ebruc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\obj\\",
+      "outputPath": "D:\\Code\\MovieDB\\MovieDB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\ebruc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7722,12 +7724,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.16, 5.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7736,7 +7732,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

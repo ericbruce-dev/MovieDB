@@ -6,14 +6,14 @@
 @*Movie*@
 <div class="row">
     <div class="col-sm-12 col-md-6">
-        <div class="row">
-            <img src="@_imageService.DecodeImage(Model.Poster, Model.PosterType)" alt="..." class="w-100 h-100" />
+        <div class="row align-content-sm-center">
+            <img src="@_imageService.DecodeImage(Model.Poster, Model.PosterType)" alt="..." class="col-8" />
         </div>
         <div class="row">
-            <button class="btn btn-lg btn-block btn-danger font-weight-bold" data-toggle="modal" data-target="#trailer">WATCH TRAILER</button>
+            <button class="btn btn-lg btn-block btn-danger font-weight-bold col-md-8 align-content-sm-center" data-toggle="modal" data-target="#trailer">WATCH TRAILER</button>
         </div>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 mt-sm-5 col-md-6">
         <div class="row">
             <div class="col h5">
                 <span class="font-weight-bolder mr-2">TITLE:</span> @Model.Title
@@ -50,7 +50,7 @@
 
         <div class="row">
             <div class="col">
-                <span class="h5 ml-4">@Model.Overview</span>
+                <span class="h5">@Model.Overview</span>
             </div>
         </div>
     </div>
