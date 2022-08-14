@@ -58,7 +58,7 @@ namespace MovieDB.Services
                     Overview = movie.overview,
                     RunTime = movie.runtime,
                     VoteAverage = movie.vote_average,
-                    ReleaseDate = movie.release_date,
+                    ReleaseDate = DateTime.Parse(movie.release_date).ToString("MMM dd, yyyy"),
                     TrailerUrl = BuildTrailerPath(movie.videos),
                     Backdrop = await EncodeBackdropImageAsync(movie.backdrop_path),
                     BackdropType = BuildImageType(movie.backdrop_path),
@@ -66,41 +66,41 @@ namespace MovieDB.Services
                     Rating = GetRating(movie.release_dates)
                 };
 
-                //var castMembers = movie.credits.cast.OrderByDescending(c => c.popularity)
-                //                                    .GroupBy(c => c.cast_id)
-                //                                    .Select(g => g.FirstOrDefault())
-                //                                    .Take(20)
-                //                                    .ToList();
+                var castMembers = movie.credits.cast.OrderByDescending(c => c.popularity)
+                                                    .GroupBy(c => c.cast_id)
+                                                    .Select(g => g.FirstOrDefault())
+                                                    .Take(20)
+                                                    .ToList();
 
-                //castMembers.ForEach(member =>
-                //{
-                //    newMovie.Cast.Add(new MovieCast()
-                //    {
-                //        CastID = member.id,
-                //        Department = member.known_for_department,
-                //        Name = member.name,
-                //        Character = member.character,
-                //        ImageUrl = BuildCastImage(member.profile_path)
-                //    });
-                //});
+                castMembers.ForEach(member =>
+                {
+                    newMovie.Cast.Add(new MovieCast()
+                    {
+                        CastID = member.id,
+                        Department = member.known_for_department,
+                        Name = member.name,
+                        Character = member.character,
+                        ImageUrl = BuildCastImage(member.profile_path)
+                    });
+                });
 
-                //var crewMembers = movie.credits.crew.OrderByDescending(c => c.popularity)
-                //                                    .GroupBy(c => c.id)
-                //                                    .Select(g => g.First())
-                //                                    .Take(20)
-                //                                    .ToList();
+                var crewMembers = movie.credits.crew.OrderByDescending(c => c.popularity)
+                                                    .GroupBy(c => c.id)
+                                                    .Select(g => g.First())
+                                                    .Take(20)
+                                                    .ToList();
 
-                //crewMembers.ForEach(member =>
-                //{
-                //    newMovie.Crew.Add(new MovieCrew()
-                //    {
-                //        CrewID = member.id,
-                //        Department = member.department,
-                //        Name = member.name,
-                //        Job = member.job,
-                //        ImageUrl = BuildCastImage(member.profile_path)
-                //    });
-                //});
+                crewMembers.ForEach(member =>
+                {
+                    newMovie.Crew.Add(new MovieCrew()
+                    {
+                        CrewID = member.id,
+                        Department = member.department,
+                        Name = member.name,
+                        Job = member.job,
+                        ImageUrl = BuildCastImage(member.profile_path)
+                    });
+                });
             }
             catch (Exception ex)
             {
