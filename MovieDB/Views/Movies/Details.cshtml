@@ -4,8 +4,8 @@
 @model Movie
 
 @*Movie*@
-<div class="row">
-    <div class="col">
+<div class="row flex-sm-fill">
+    <div class="col align-content-center">
         <div class="row">
             <div class="col-8">
                 <img class="h-100 w-100" src="@_imageService.DecodeImage(Model.Poster, Model.PosterType)" alt="..."/>
@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             <div class="col-8">
-                <button class="btn btn-lg btn-block btn-danger font-weight-bold align-content-sm-center" data-toggle="modal" data-target="#trailer">WATCH TRAILER</button>
+                <button class="btn btn-lg btn-block btn-danger font-weight-bold align-content-sm-center mb-5" data-toggle="modal" data-target="#trailer">WATCH TRAILER</button>
             </div>
         </div>
     </div>
@@ -34,7 +34,25 @@
 
         <div class="row">
             <div class="col h5">
-                <span class="font-weight-bolder mr-2">RATING:</span> @Model.Rating
+                <span class="font-weight-bolder mr-2">RATING:</span>
+
+                @*adding dashes to the ratings that require it to be added*@
+                @if (Model.Rating == MovieDB.Enums.MovieRating.PG13) 
+                {
+                    ViewData["Rating"] = "PG-13";
+                }
+
+                else if (Model.Rating == MovieDB.Enums.MovieRating.NC17)
+                {
+                    ViewData["Rating"] = "NC-17";
+                }
+
+                else
+                {
+                    ViewData["Rating"] = Model.Rating.ToString();
+                }
+
+                @ViewData["Rating"]
             </div>
         </div>
         <hr />
@@ -61,20 +79,19 @@
 </div>
 
  @*Cast*@
-<div class="row">
     @foreach(var actor in Model.Cast.Take(5))
     {
-        <div class="row">
-            <div class="col">
+        <div class="row mt-5">
+            <div class="col-12">
                 <div class="card mb-3">
                 <div class="row no-gutters">
                     <div class="col-md-2">
                         <img src="@actor.ImageUrl" alt="..." class="img-fluid" style="width: 10rem"/>
                     </div>
                     <div class="col-md-10">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: @actor.Name</h5>
-                            <p class="card-text">Character: @actor.Character</p>
+                        <div class="card-body pl-sm-0 pl-md-3">
+                            <h5 class="card-title"><a asp-action="Details" asp-controller="Actors" asp-route-id="@actor.CastID">@actor.Name</a></h5>
+                            <p class="card-text">@actor.Character</p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +100,6 @@
       </div>
             
     }
-</div>
 
 @*Modal*@
 <div class="modal fade" id="trailer" tabindex="-1" role="dialog" aria-labelledby="trailerLabel" aria-hidden="true">

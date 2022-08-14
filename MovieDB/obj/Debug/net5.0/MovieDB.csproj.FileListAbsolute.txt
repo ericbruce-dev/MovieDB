@@ -880,3 +880,4 @@ C:\Users\ebruc\Source\Repos\MovieDB\MovieDB\obj\Debug\net5.0\refint\MovieDB.dll
 C:\Users\ebruc\Source\Repos\MovieDB\MovieDB\obj\Debug\net5.0\MovieDB.pdb
 C:\Users\ebruc\Source\Repos\MovieDB\MovieDB\obj\Debug\net5.0\MovieDB.genruntimeconfig.cache
 C:\Users\ebruc\Source\Repos\MovieDB\MovieDB\obj\Debug\net5.0\ref\MovieDB.dll
+D:\Code\MovieDB\MovieDB\obj\Debug\net5.0\Razor\Views\Actors\Details.cshtml.g.cs
