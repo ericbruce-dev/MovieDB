@@ -1,9 +1,11 @@
 ﻿@using MovieDB.Models.TMDB
 @model ActorDetail
 
-<div class="media">
-    <img src="@Model.profile_path" class="align-self-center mr-3" alt="..." />
-    <div class="media-body">
+<div class="row media">
+<div class="col-sm-12 col-md-3">
+    <img src="@Model.profile_path" class="h-100 w-100 mr-3" alt="..." />
+</div>
+    <div class="media-body col-sm-12 col-9">
         <table class="table table-hover">
             <tbody>
                 <tr>
@@ -12,19 +14,19 @@
                         @Model.name
                     </td>
                 </tr>
-                  <tr>
+                    <tr>
                     <td>Biography:</td>
                     <td>
                         @Model.biography
                     </td>
                 </tr>
-                  <tr>
+                    <tr>
                     <td>Birthday:</td>
                     <td>
                         @Model.birthday
                     </td>
                 </tr>
-                  <tr>
+                    <tr>
                     <td>Place of Birth:</td>
                     <td>
                         @Model.place_of_birth
@@ -33,4 +35,5 @@
             </tbody>
         </table>
     </div>
+ @*</div>*@
 </div>
