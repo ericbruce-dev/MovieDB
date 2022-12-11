@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MovieDB",
+    "\\MovieDB\\Views"
   ],
   "SelectedNode": "\\MovieDB.sln",
   "PreviewInSolutionExplorer": false
