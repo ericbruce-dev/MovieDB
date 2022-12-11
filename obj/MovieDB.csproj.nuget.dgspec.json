@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\MovieDB.csproj": {}
+    "C:\\Users\\ebruc\\source\\repos\\MovieDB\\MovieDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\MovieDB.csproj": {
+    "C:\\Users\\ebruc\\source\\repos\\MovieDB\\MovieDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\MovieDB.csproj",
+        "projectUniqueName": "C:\\Users\\ebruc\\source\\repos\\MovieDB\\MovieDB.csproj",
         "projectName": "MovieDB",
-        "projectPath": "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\MovieDB.csproj",
+        "projectPath": "C:\\Users\\ebruc\\source\\repos\\MovieDB\\MovieDB.csproj",
         "packagesPath": "C:\\Users\\ebruc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ebruc\\Source\\Repos\\MovieDB\\MovieDB\\obj\\",
+        "outputPath": "C:\\Users\\ebruc\\source\\repos\\MovieDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

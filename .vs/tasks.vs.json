@@ -5,6 +5,11 @@
       "taskLabel": "task-MovieDB",
       "appliesTo": "/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-MovieDB",
+      "appliesTo": "/",
+      "type": "launch"
     }
   ]
 }
