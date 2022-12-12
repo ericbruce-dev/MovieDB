@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-MovieDB-373124B8-BBAA-4B3D-AD82-1D351D700EFB</UserSecretsId>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
-    <DockerDefaultTargetOS>false</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>true</DockerDefaultTargetOS>
 	<InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
