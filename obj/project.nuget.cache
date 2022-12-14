@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DtRThdnrVEfYJTexyWduBh6x2jmOq/jDyp7UPT8yvTh13fWu73mxEgZoR7nzuoB+zgsV2hSlWP1/eWVtmeAz4g==",
+  "dgSpecHash": "91ZAXeQYjT1NNtXGcmNEmuJ0kCIuwcHn525+dXu7m3/j4lfsoI5KjQ7L1HKDmaq7HEWMHjtsQiGft7DRys1zVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ebruc\\source\\repos\\MovieDB\\MovieDB.csproj",
   "expectedPackageFiles": [
@@ -141,8 +141,7 @@
     "C:\\Users\\ebruc\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ebruc\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ebruc\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ebruc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\ebruc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+    "C:\\Users\\ebruc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
