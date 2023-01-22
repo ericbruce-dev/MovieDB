@@ -433,3 +433,8 @@ C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\refint\MovieDB.dll
 C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\MovieDB.pdb
 C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\MovieDB.genruntimeconfig.cache
 C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\ref\MovieDB.dll
+C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\staticwebassets\msbuild.MovieDB.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\staticwebassets\msbuild.build.MovieDB.props
+C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MovieDB.props
+C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MovieDB.props
+C:\Users\ebruc\source\repos\MovieDB\obj\Debug\net6.0\staticwebassets.pack.json

@@ -1,0 +1,32 @@
+﻿@using MovieDB.Models.ViewModels
+@using MovieDB.Models.TMDB
+@model LandingPageVM
+
+<div class="row">
+    <input placeholder="Search" /><button id="searchButton" onclick="searchFunction" class="btn btn-primary">Search</button>
+</div>
+
+@Model.
+
+@*Search Results*@
+   @* @foreach(var movie in Model.Cast.Take(5))
+    {
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-2">
+                        <img src="@actor.ImageUrl" alt="..." class="img-fluid" style="width: 10rem"/>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body pl-sm-0 pl-md-3">
+                            <h5 class="card-title"><a asp-action="Details" asp-controller="Actors" asp-route-id="@actor.CastID">@actor.Name</a></h5>
+                            <p class="card-text">@actor.Character</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>*@
+            
+    }
